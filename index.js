@@ -48,18 +48,36 @@
 *? інакше виводити рядок "Невірний пароль!"
  */
 
-const login = prompt("Введіть логін.").trim();
-console.log(login);
-if (login === "Адмін") {
-  const password = prompt("Введіть пароль.");
-  if (password === "Я головний") {
-    console.log("Здрастуйте!");
-  } else {
-    console.log("Невірний пароль!");
+// const login = prompt("Введіть логін.").trim();
+// console.log(login);
+// if (login === "Адмін") {
+//   const password = prompt("Введіть пароль.");
+//   if (password === "Я головний") {
+//     console.log("Здрастуйте!");
+//   } else {
+//     console.log("Невірний пароль!");
+//   }
+// } else if (!login) {
+//   // } else if (login === "" || login === null) {
+//   console.log("Скасовано");
+// } else {
+//   console.log("Я вас не знаю");
+// }
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі парні числа  від max до min  за спаданням
+ */
+
+const max = 50;
+const min = 23;
+
+for (let i = max; i >= min; i--) {
+  // if (i % 2 === 0) {
+  //   console.log(i);
+  // }
+
+  if (i % 2 !== 0) {
+    console.log(i);
   }
-} else if (!login) {
-  // } else if (login === "" || login === null) {
-  console.log("Скасовано");
-} else {
-  console.log("Я вас не знаю");
 }
