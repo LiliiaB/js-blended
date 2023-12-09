@@ -35,13 +35,13 @@
 *? Напишіть код, який запитуватиме
 *? логін за допомогою prompt та логувати результат
 *? у консоль браузера
-    
+
 *? Якщо відвідувач вводить "Адмін",
 *? то prompt запитує пароль.
 *? Якщо нічого не ввели або натиснуто клавішу Esc
 *? вивести рядок "Скасовано"
 *? В іншому випадку вивести рядок "Я вас не знаю"
-    
+
 *? Пароль перевіряти так:
 *? Якщо введено пароль "Я головний",
 *? то вивести рядок "Здрастуйте!"
@@ -90,7 +90,7 @@
  *? поки користувач не натисне кнопку Cancel у prompt.
  *? Після того як користувач припинив введення, натиснувши на
  *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
- 
+
  *! Робити перевірку, що користувач ввів саме число,
  *! а не довільний набір символів не потрібно.
  */
@@ -131,19 +131,45 @@
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 
-const someObj = {
-  worker1: 360,
-  worker2: 750,
-  worker3: 240,
-};
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
 
-function totalSalaries(obj) {
-  let total = 0;
-  // const salaries = Object.values(obj);
-  for (const salary of Object.values(obj)) {
-    total += salary;
+// function totalSalaries(obj) {
+//   let total = 0;
+//   // const salaries = Object.values(obj);
+//   for (const salary of Object.values(obj)) {
+//     total += salary;
+//   }
+//   return total;
+// }
+
+// console.log(totalSalaries(someObj));
+//^=============================================================
+/**
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 6 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 150, quantity: 100 },
+];
+function calcTotalPrice(someStones, stoneName) {
+  for (const item of someStones) {
+    if (item.name === stoneName) {
+      return item.price * item.quantity
+    }
   }
-  return total;
+  return "Камінь не знайдено"
 }
-
-console.log(totalSalaries(someObj));
+const result = calcTotalPrice(stones, "Изумруд")
+console.log(result);
+//^=============================================================
