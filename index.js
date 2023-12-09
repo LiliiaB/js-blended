@@ -113,18 +113,37 @@
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
-};
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
 
-const keys = Object.keys(user);
-console.log(keys);
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
+// const keys = Object.keys(user);
+// console.log(keys);
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+
+const someObj = {
+  worker1: 360,
+  worker2: 750,
+  worker3: 240,
+};
+
+function totalSalaries(obj) {
+  let total = 0;
+  // const salaries = Object.values(obj);
+  for (const salary of Object.values(obj)) {
+    total += salary;
+  }
+  return total;
 }
+
+console.log(totalSalaries(someObj));
