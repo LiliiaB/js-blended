@@ -309,9 +309,32 @@ class Notes {
       this.items.splice(idx, 1);
     }
   }
+  updatePriority(id, newPriority) {
+    const item = this.items.find((item) => item.id === id);
+    console.log(item);
+    if (item) {
+      item.priority = newPriority;
+    }
+  }
 }
 const newNotes = new Notes();
 
 newNotes.addNote({ id: 1, text: "hhjk", priority: Notes.Priority().HIGHT });
 newNotes.removeNote(0);
+newNotes.updatePriority(1, Notes.Priority().LOW);
 console.log(newNotes);
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+function checkBrackets(someFn) {}
+
+console.log(checkBrackets(someFn));
