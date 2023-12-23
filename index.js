@@ -252,25 +252,54 @@ const fruits = [
 
 // console.log(newFruits(fruits));
 
-/**
- *? З об'єкту concerts потрібно отримати масив
- *? в якому будуть лише імена міст.
- *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
- *? відсортувати їх у хронологічному порядку.
- *? Результат вивести у консоль.
- *? Очікуваний результат ["Одеса", "Умань", "Харків"]
- */
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2025-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2025-03-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2025-07-10"),
-};
+// /**
+//  *? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2025-03-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2025-07-10"),
+// };
 
-const newArray = Object.keys(concerts);
-const softFilter = newArray.filter((element)=>{return concerts[element] > new Date()})
-const sortedFilter = softFilter.toSorted((a, b) => {return concerts[a] - concerts[b]})
-console.log(sortedFilter);
-console.log(new Date());
+// const newArray = Object.keys(concerts);
+// const softFilter = newArray.filter((element)=>{return concerts[element] > new Date()})
+// const sortedFilter = softFilter.toSorted((a, b) => {return concerts[a] - concerts[b]})
+// console.log(sortedFilter);
+// console.log(new Date());
+//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===//?===
+// /**
+//  *? Напиши клас Notes який управляє колекцією нотаток у
+//   *? властивості items.
+//  *? Нотатка - це об'єкт із властивостями text і priority.
+//   *? Додай класу статичний метод Priopity,
+//  *? який буде повертати об'єкт із пріоритетами.
+//   *? Додай методи addNote(note), removeNote(text)
+//     *? updatePriority(text, newPriority)
+//  static Priority() {
+//   return {
+//     HIGHT: "hight",
+//     LOW: "low",
+//   };
+// }/
+
+class Notes {
+  static Priority() {
+    return {
+      HIGHT: "hight",
+      LOW: "low",
+    };
+  }
+  constructor() { this.items = [] }
+  addNote(note) { this.items.push(note) }
+}
+const newNotes = new Notes()
+console.log(newNotes);
+newNotes.addNote({ id: 1, text: "hhjk", priority: Notes.Priority().HIGHT })
