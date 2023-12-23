@@ -297,9 +297,21 @@ class Notes {
       LOW: "low",
     };
   }
-  constructor() { this.items = [] }
-  addNote(note) { this.items.push(note) }
+  constructor() {
+    this.items = [];
+  }
+  addNote(note) {
+    this.items.push(note);
+  }
+  removeNote(id) {
+    const idx = this.items.findIndex((item) => item.id === id);
+    if (idx !== -1) {
+      this.items.splice(idx, 1);
+    }
+  }
 }
-const newNotes = new Notes()
+const newNotes = new Notes();
+
+newNotes.addNote({ id: 1, text: "hhjk", priority: Notes.Priority().HIGHT });
+newNotes.removeNote(0);
 console.log(newNotes);
-newNotes.addNote({ id: 1, text: "hhjk", priority: Notes.Priority().HIGHT })
