@@ -16,6 +16,17 @@ alertButtonEl.addEventListener("click", () => {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+const leftSwapInputEl = document.querySelector(`#leftSwapInput`);
+const rightSwapInputEl = document.querySelector(`#rightSwapInput`);
+const swapButtonEl = document.querySelector(`#swapButton`);
+
+swapButtonEl.addEventListener("click", () => {
+  const valueLeftInput = leftSwapInputEl.value;
+  const valueRightInput = rightSwapInputEl.value;
+
+  leftSwapInputEl.value = valueRightInput;
+  rightSwapInputEl.value = valueLeftInput;
+});
 
 //TODO:==============================================
 /*
