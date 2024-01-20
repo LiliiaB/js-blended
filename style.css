@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+  background-color: rgb(130, 195, 132);
+}
+
+div {
+  margin-bottom: 100px;
+}
+
+#box {
+  width: 50px;
+  height: 50px;
+  border: 2px dashed red;
+  margin: 10px;
+}
+
+.outerCircle,
+.innerCircle {
+  margin: 0;
+  border-radius: 50%;
+}
+
+.outerCircle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+}
+
+.innerCircle {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
+#circleButton {
+  margin-top: 20px;
+}
+
+#place {
+  width: 100px;
+  height: 200px;
+  background-color: green;
+}
+
+.checkboxList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.taskTitle {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.grid {
+  display: flex;
+  width: 460px;
+  height: 460px;
+  border: 2px solid white;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.gridItem {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  background-color: red;
+  border: 1px dashed black;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.eventThumb {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.eventList {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.eventKey {
+  color: firebrick;
+}
+
+.eventCode {
+  color: blueviolet;
+}
