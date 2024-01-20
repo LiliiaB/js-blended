@@ -76,14 +76,10 @@ increaseBtnEl.addEventListener("click", () => {
 */
 
 addEventListener("click", (event) => {
-    if (event.target.id === "place") {
-      console.log(true);
-    }
+  if (event.target.id === "place") {
+    console.log(true);
+  }
 });
-
-
-
-
 
 //TODO:==============================================
 /*
@@ -91,6 +87,13 @@ addEventListener("click", (event) => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
+
+const liEl = document.querySelectorAll(".listItem");
+const doubleBtnEl = document.querySelector("#double");
+
+doubleBtnEl.addEventListener("click", () => {
+  liEl.forEach((el) => (el.textContent = BigInt(el.textContent) ** 2n));
+});
 
 //TODO:==============================================
 /*
